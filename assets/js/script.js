@@ -1,3 +1,4 @@
+const backgroundBody = document.querySelector("[background-main]");
 const pokeCard = document.querySelector("[data-poke-card]");
 const pokeName = document.querySelector("[data-poke-name]");
 const pokeImg = document.querySelector("[data-poke-img]");
@@ -54,21 +55,18 @@ const setCardColor = (types) => {
   const colorTwo = types[1]
     ? typeColors[types[1].type.name]
     : typeColors.default;
+
+  backgroundBody.style.background = `linear-gradient(170deg, ${colorOne} 50%, ${colorTwo} 50%)`;
+  backgroundBody.style.backgroundSize = "5px 5px";
   pokeImg.style.background = `radial-gradient(${colorTwo} 33%, ${colorOne} 33%)`;
   pokeImg.style.backgroundSize = "5px 5px";
 };
 
 const renderPokemonTypes = (types) => {
-  const colorOne = typeColors[types[0].type.name];
-  const colorTwo = types[1]
-    ? typeColors[types[1].type.name]
-    : typeColors.default;
   pokeTypes.innerHTML = "";
   types.forEach((type) => {
     const typeTextElement = document.createElement("div");
     typeTextElement.style.color = typeColors[type.type.name];
-    /* typeTextElement.style.background = typeColors[type.type.name];
-    typeTextElement.style.background = `radial-gradient(${colorTwo} 33%, ${colorOne} 33%)`; */
     typeTextElement.style.backgroundSize = "5px 5px";
     typeTextElement.textContent = type.type.name;
     pokeTypes.appendChild(typeTextElement);

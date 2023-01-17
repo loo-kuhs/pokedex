@@ -3,7 +3,7 @@ html {
 }
 
 body {
-  background-image: linear-gradient(
+  background: linear-gradient(
     to bottom,
     #d81029,
     #e16346,
