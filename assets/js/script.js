@@ -67,9 +67,9 @@ const renderPokemonTypes = (types) => {
   types.forEach((type) => {
     const typeTextElement = document.createElement("div");
     typeTextElement.style.color = typeColors[type.type.name];
-    //.style.background = typeColors[type.type.name];
-    //typeTextElement.style.background = `radial-gradient(${colorTwo} 33%, ${colorOne} 33%)`;
-    typeTextElement.style.backgroundSize = "5px 5px"
+    /* typeTextElement.style.background = typeColors[type.type.name];
+    typeTextElement.style.background = `radial-gradient(${colorTwo} 33%, ${colorOne} 33%)`; */
+    typeTextElement.style.backgroundSize = "5px 5px";
     typeTextElement.textContent = type.type.name;
     pokeTypes.appendChild(typeTextElement);
   });
@@ -91,7 +91,7 @@ const renderPokemonStats = (stats) => {
 
 const renderNotFound = () => {
   pokeName.textContent = "that pokemon does not exist";
-  pokeImg.setAttribute("src", "poke-shadow.png");
+  pokeImg.setAttribute("src", "./assets/images/poke-shadow.png");
   pokeImg.style.background = "#fff";
   pokeTypes.innerHTML = "";
   pokeStats.innerHTML = "";

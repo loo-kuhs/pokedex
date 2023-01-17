@@ -1,5 +1,5 @@
 html {
-  height: 100%;
+  min-height: 100vh;
 }
 
 body {
@@ -13,10 +13,11 @@ body {
   );
   background-repeat: no-repeat;
   background-attachment: fixed;
+  font-family: "Roboto Mono", monospace;
 }
 
 form {
-  width: 200px;
+  width: 14.375rem;
   margin: 15px auto;
   position: relative;
   height: fit-content;
@@ -26,28 +27,26 @@ form::before {
   content: "";
   background: radial-gradient(black 33%, transparent 33%);
   background-size: 3px 3px;
-  height: 93%;
-  width: 111%;
+  height: 100%;
+  width: 100%;
   position: absolute;
-  left: 9px;
-  top: 10px;
+  left: 33px;
+  top: 7px;
   z-index: -1;
   border-radius: 6px;
 }
 
-input {
+.search {
   width: 100%;
-  padding: 10px;
+  padding: 0.75rem;
   border: 1px solid black;
   border-radius: 6px;
   text-align: center;
-  font-family: "Roboto Mono", monospace;
 }
 
 .poke-card {
   position: relative;
   height: fit-content;
-  font-family: "Roboto Mono", monospace;
   max-width: 300px;
   border-radius: 10px;
   color: #000;
